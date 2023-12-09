@@ -2,7 +2,7 @@ import { MyButton } from "../page";
 
 const ScreenTwo = () => {
   return (
-    <div className="w-screen min-h-screen xl:px-[3.94rem] xl:pb-[3.94rem]  lg:border lg:border-solid">
+    <div className="w-screen min-h-screen xl:px-[3.94rem] xl:pb-[3.94rem]">
       {/* header copy */}
       <nav className="w-full h-12 items-center justify-between hidden xl:flex lg:flex mb-[1.37rem] mt-[2.81rem]">
         <div className="gap-[0.43rem] items-center flex">
@@ -25,8 +25,8 @@ const ScreenTwo = () => {
       </nav>
       {/* header copy ends */}
 
-      <div className=" xl:gap-[5.63rem] lg:gap-[2.63rem] lg:grid-cols-2 lg:grid">
-        <div className="flex-1 overflow-hidden pt-[3.25rem] pe-[1.812rem] pb-[5.458rem] ps-[2.25rem] xl:p-0 lg:p-0 lg:w-[34.0625rem] bg-white">
+      <div className=" xl:gap-[5.63rem] lg:gap-[2.63rem] lg:justify-between lg:flex">
+        <div className="flex-1 overflow-hidden pt-[3.25rem] pb-[5.458rem] px-[1.81rem] xl:p-0 lg:p-0 lg:w-[34.0625rem] bg-white">
           <TopNav />
           <HeadingAndImage />
           <DescriptionAndDate />
@@ -37,19 +37,19 @@ const ScreenTwo = () => {
             </h5>
 
             <div>
-              <div className="gap-24 pb-1.5 justify-start flex">
+              <div className="gap-24 lg:gap-10 pb-1.5 lg:justify-around flex">
                 <MiniLocation text={"Spain"} />
                 <MiniLocation text={"Spain"} />
                 <MiniLocation text={"Spain"} />
                 <MiniLocation text={"Spain"} />
               </div>
-              <div className="gap-24 pb-1.5 justify-start flex">
+              <div className="gap-24 lg:gap-10 pb-1.5 lg:justify-around flex">
                 <MiniLocation text={"Spain"} />
                 <MiniLocation text={"Spain"} />
                 <MiniLocation text={"Spain"} />
                 <MiniLocation text={"Spain"} />
               </div>
-              <div className="gap-24 pb-1.5 justify-start flex">
+              <div className="gap-24 lg:gap-10 pb-1.5 lg:justify-around flex">
                 <MiniLocation text={"Spain"} />
                 <MiniLocation text={"Spain"} />
                 <MiniLocation text={"Spain"} />
@@ -57,7 +57,7 @@ const ScreenTwo = () => {
               </div>
             </div>
 
-            <div className="button_wrapper flex-col gap-[1.81rem] flex">
+            <div className="button_wrapper flex-col gap-[1.81rem] lg:hidden flex">
               <MyButton text={"Submit"} mode={"light"} color={"#34333e"} />
               <button className="otuline-none hover:outline-none bg-transparent underline text-black text-[0.74769rem] font-semibold leading-[1.1215rem]">
                 Save & Publish Later
@@ -66,8 +66,10 @@ const ScreenTwo = () => {
           </div>
         </div>
 
+        <hr className="w-[0.0625rem] h-[42.31788rem] bg-[#E8E8E8] hidden lg:flex" />
+
         <div className="flex-1 gap-[24.69rem] flex-col justify-center hidden lg:flex">
-          {/* copt starts */}
+          {/* copy starts */}
           <div className=" flex-col gap-9 inline-flex">
             <div className="w-full px-7 py-5 bg-stone-50 rounded-lg  gap-9 inline-flex">
               <div className="bg-[#34333e] shrink-0 w-[2.56rem] h-[2.56rem] rounded-[0.31rem] items-center justify-center flex">
@@ -104,7 +106,7 @@ const ScreenTwo = () => {
 
             <input
               type="text"
-              className="grow shrink basis-0 h-6 items-center flex text-neutral-400 text-sm leading-normal focus:border-none outline-none border-none"
+              className="ps-4 flex-1 h-6 input rounded-2xl text-neutral-400 text-lg leading-normal "
             />
 
             <div className="w-8 pl-1.5 pr-2.5 py-2 bg-neutral-700 rounded-md justify-center items-center flex">
@@ -125,11 +127,11 @@ export const TopNav = () => {
     <div className="top_nav items-center gap-[8.437rem] mb-[1.88rem] flex">
       <img src="/images/backarrow.svg" alt="back arrow icon" />
       <div className="items-center justify-end gap-[0.44rem] text-[0.8125rem] w-fit flex-1 flex">
-        <button className="w-[4.625rem] py-[0.43725rem] px-[0.54656rem] items-center gap-[0.375rem] rounded-[0.3125rem] bg-white border border-[#34333e] border-solid hover:border-[#34333e] flex">
+        <button className="w-[4.625rem] lg:w-[7.0625rem] py-[0.43725rem] px-[0.54656rem] items-center gap-[0.375rem] rounded-[0.3125rem] bg-white border border-[#34333e] border-solid hover:border-[#34333e] flex">
           <img src="/images/saveicon.svg" alt="save icon" />
           Save
         </button>
-        <button className="w-[4.625rem] py-[0.43725rem] px-[0.54656rem] items-center gap-[0.375rem] rounded-[0.3125rem] bg-[#34333e] border border-white border-solid text-white">
+        <button className="w-[4.625rem] lg:w-[7.0625rem] py-[0.43725rem] px-[0.54656rem] items-center gap-[0.375rem] rounded-[0.3125rem] bg-[#34333e] border border-white border-solid text-white">
           Submit
         </button>
       </div>
@@ -174,7 +176,7 @@ export const HeadingAndImage = () => {
           </span>
         </span>
       </div>
-      <div className="gap-[0.625rem] my-[1.69rem] overflow-x-hidden flex">
+      <div className="gap-[0.625rem] my-[1.69rem] overflow-x-hidden justify-stretch flex">
         <div className="w-[9.75rem] h-[8.5625rem] rounded-[1.40225rem] shrink-0 smiling_dog"></div>
         <div className="w-[9.75rem] h-[8.5625rem] rounded-[1.40225rem] shrink-0 smiling_dog"></div>
         <div className="w-[9.75rem] h-[8.5625rem] rounded-[1.40225rem] shrink-0 smiling_dog lg:hidden"></div>
