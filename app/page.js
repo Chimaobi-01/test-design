@@ -1,11 +1,13 @@
 "use client";
 
 import { Dropdown } from "flowbite-react";
+import Link from "next/link";
 
 const Home = () => {
   return (
-    <main className="flex w-screen min-h-screen lg:justify-around xl:justify-start xl:gap-[6rem] gap-[4rem] px-[4rem] xl:px-[5.5rem]">
-      <div className=" bg-green-50 rounded-tl-2xl rounded-tr-2xl rounded-bl-[5.5rem] flex-1 items-end lg:flex hidden relative bottom-[5.7rem] max-w-[36rem]">
+    <main className="flex w-screen min-h-screen lg:justify-around xl:justify-start xl:gap-[6rem] gap-[4rem] lg:ps-[4rem] xl:ps-[5.5rem]">
+
+      <div className=" bg-green-50 rounded-tl-2xl rounded-tr-2xl rounded-bl-[5.5rem] flex-1 items-end lg:flex hidden relative bottom-[4.7rem] max-w-[36rem]">
 
         <div className="content-wrapper ps-[3rem] flex-col items-end flex ">
 
@@ -124,13 +126,17 @@ export const InputField = () => {
   );
 };
 
-export const MyButton = ({ text, color, border, mode }) => {
+export const MyButton = ({ text, color, border, mode, link }) => {
+
+  const visitLink = link? link : "#"
+
+
   return (
     <button
       className={`items-center justify-center py-[1.12rem] text-[1.125rem] px-[3.125rem] h-[3.375rem] rounded-[0.25rem]  bg-[${color}] flex ${border} `}
     >
-      <span className={`tracking-[-0.01875rem] leading-[1.875rem] ${mode}`}>
-        {text}
+      <span className={`tracking-[-0.01875rem] leading-[1.875rem] `}>
+        <Link href={visitLink} className={`${mode}`}>{text}</Link>
       </span>
     </button>
   );
@@ -138,7 +144,7 @@ export const MyButton = ({ text, color, border, mode }) => {
 
 export const FormSection = () => {
   return (
-    <section className=" px-[1.56rem] pt-[5.12rem] pb-[19.44rem] lg:py-0 flex-col lg:gap-[3.1rem] gap-[3.69rem] self-center items-center lg:max-w-[35rem] lg:flex-1 flex">
+    <section className=" px-[1.56rem] lg:p-0 flex-col lg:gap-[3.1rem] gap-[3.69rem] self-center items-center lg:max-w-[35rem] lg:flex-1 flex">
 
       <div className="flex-col gap-[2.25rem] items-center hidden lg:flex">
 
@@ -218,7 +224,7 @@ export const FormSection = () => {
       </div>
 
       <div className="buttons flex-col gap-[1.12rem] w-full flex">
-        <MyButton text={"Continue"} color={"#34333e"} mode={"light"} />
+        <MyButton text={"Continue"} color={"#34333e"} mode={"light"} link={"/screen2"} />
         <MyButton
           text={"Have an Account? Login"}
           color={"#ffffff"}
