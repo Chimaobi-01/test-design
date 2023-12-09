@@ -1,3 +1,6 @@
+"use client"
+
+import { useRouter } from "next/navigation";
 import { MyButton } from "../page";
 
 const ScreenTwo = () => {
@@ -123,9 +126,12 @@ const ScreenTwo = () => {
 export default ScreenTwo;
 
 export const TopNav = () => {
+
+  const router = useRouter()
+
   return (
     <div className="top_nav items-center gap-[8.437rem] mb-[1.88rem] flex">
-      <img src="/images/backarrow.svg" alt="back arrow icon" />
+      <img src="/images/backarrow.svg" alt="back arrow icon" className="cursor-pointer" onClick={() => router.push("/")}  />
       <div className="items-center justify-end gap-[0.44rem] text-[0.8125rem] w-fit flex-1 flex">
         <button className="w-[4.625rem] lg:w-[7.0625rem] py-[0.43725rem] px-[0.54656rem] items-center gap-[0.375rem] rounded-[0.3125rem] bg-white border border-[#34333e] border-solid hover:border-[#34333e] flex">
           <img src="/images/saveicon.svg" alt="save icon" />

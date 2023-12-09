@@ -1,7 +1,7 @@
 "use client";
 
 import { Dropdown } from "flowbite-react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Home = () => {
   return (
@@ -129,14 +129,14 @@ export const InputField = () => {
 export const MyButton = ({ text, color, border, mode, link }) => {
 
   const visitLink = link? link : "#"
-
+  const router = useRouter()
 
   return (
-    <button
+    <button onClick={() => router.push(visitLink)}
       className={`items-center justify-center py-[1.12rem] text-[1.125rem] px-[3.125rem] h-[3.375rem] rounded-[0.25rem]  bg-[${color}] flex ${border} `}
     >
-      <span className={`tracking-[-0.01875rem] leading-[1.875rem] `}>
-        <Link href={visitLink} className={`${mode}`}>{text}</Link>
+      <span className={`tracking-[-0.01875rem] leading-[1.875rem] ${mode}`}>
+        {text}
       </span>
     </button>
   );
