@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 const Home = () => {
   return (
-    <main className="flex w-screen min-h-screen lg:justify-around xl:justify-start xl:gap-[6rem] gap-[4rem] lg:ps-[4rem] xl:ps-[5.5rem]">
+    <main className="flex w-full h-full lg:justify-around xl:justify-start xl:gap-[6rem] gap-[4rem] lg:ps-[4rem] xl:ps-[5.5rem]">
 
       <div className=" bg-green-50 rounded-tl-2xl rounded-tr-2xl rounded-bl-[5.5rem] flex-1 items-end lg:flex hidden relative bottom-[4.7rem] max-w-[36rem]">
 
