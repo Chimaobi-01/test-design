@@ -7,8 +7,8 @@ const Screen3 = () => {
     const router = useRouter()
 
     return (
-        <div className='max-w-[24.3rem] mx-auto w-screen min-h-screen pb-[3.31rem]'>
-            <div className=" bg-gradient-to-b from-white to-white px-[19px] py-[3.31rem]">
+        <div className='max-w-[24.5rem] flex-1 mx-auto w-screen min-h-screen pb-[3.31rem]'>
+            <div className=" bg-gradient-to-b from-white to-white py-[3.31rem]">
 
                 <div className=" justify-between items-center flex ">
                     <img src="/images/backarrow.svg" alt="back arrow icon" className='cursor-pointer' onClick={() => router.push("/screen2")}/>
@@ -27,7 +27,7 @@ const Screen3 = () => {
 
                 <div className=" flex-col justify-start items-start gap-[19px] flex">
 
-                    <div className=" p-[15px] bg-stone-50 rounded-[10px] justify-between items-start gap-[9px] inline-flex">
+                    <div className=" py-[15px] bg-stone-50 rounded-[10px] justify-between items-start gap-[9px] inline-flex">
                         <div className="bg-[#34333e] w-[2.56rem] h-[2.56rem] rounded-[0.31rem] items-center justify-center flex shrink-0">
                             <img alt="logomark" src="/images/logomark.svg" />
                         </div>
@@ -39,14 +39,14 @@ const Screen3 = () => {
                         </div>
                     </div>
 
-                    <div className=" pl-[15px] justify-start items-start gap-3 inline-flex">
+                    <div className="justify-start items-start gap-3 inline-flex">
                         <div className="h-6 pl-[6.21px] pr-[11.79px] pt-[1.86px] pb-[7.14px] bg-lime-50 rounded-sm border border-lime-100 justify-start items-center flex">
                             <div className="text-lime-700 text-[9.93px] font-normal font-['Inter'] leading-[14.90px]">J</div>
                         </div>
                         <div className=" text-neutral-700 text-sm font-normal font-['Inter'] leading-normal">Pictures of Dogs laughing, with a short back story</div>
                     </div>
 
-                    <div className=" p-[15px] bg-stone-50 rounded-[10px] justify-start items-start gap-[9px] flex">
+                    <div className=" py-[15px] bg-stone-50 rounded-[10px] justify-start items-start gap-[9px] flex">
                         <div className="bg-[#34333e] w-[2.56rem] h-[2.56rem] rounded-[0.31rem] items-center justify-center flex">
                             <img alt="logomark" src="/images/logomark.svg" />
                         </div>
@@ -57,7 +57,7 @@ const Screen3 = () => {
                         </div>
                     </div>
 
-                    <div className="self-stretch pl-[19px] justify-start items-start gap-3 inline-flex">
+                    <div className="self-stretch justify-start items-start gap-3 inline-flex">
                         <div className="h-6 px-2 py-0.5 bg-lime-50 rounded-sm border border-lime-100 justify-center items-center flex">
                             <div className="text-lime-700 text-[12.90px] font-normal font-['Inter'] leading-tight">J</div>
                         </div>
@@ -77,7 +77,7 @@ const Screen3 = () => {
                     </div>
                 </div>
 
-                <div className="w-full h-14 px-3.5 py-2.5 bg-white rounded-lg shadow border border-gray-300 justify-start items-center gap-2 inline-flex">
+                <div className="w-full h-14 py-2.5 bg-white rounded-lg shadow border border-gray-300 justify-start items-center gap-2 inline-flex">
                     <div className="w-7 h-7 px-0.5 py-0.5 bg-gray-200 rounded-2xl justify-center items-center flex">
                         <img src="/images/add.svg" alt="plus sign" />
                     </div>
