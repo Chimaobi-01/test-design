@@ -7,7 +7,7 @@ const Screen3 = () => {
     const router = useRouter()
 
     return (
-        <div className='max-w-[24.5rem] flex-1 mx-auto w-screen min-h-screen pb-[3.31rem]'>
+        <div className='max-w-[24.5rem] px-7 flex-1 mx-auto w-screen min-h-screen pb-[3.31rem]'>
             <div className=" bg-gradient-to-b from-white to-white py-[3.31rem]">
 
                 <div className=" justify-between items-center flex ">
