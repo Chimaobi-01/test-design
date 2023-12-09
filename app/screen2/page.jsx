@@ -61,7 +61,7 @@ const ScreenTwo = () => {
             </div>
 
             <div className="button_wrapper flex-col gap-[1.81rem] lg:hidden flex">
-              <MyButton text={"Submit"} mode={"light"} color={"#34333e"} />
+              <MyButton text={"Submit"} mode={"light"} color={"#34333e"} link={"/screen3"} />
               <button className="otuline-none hover:outline-none bg-transparent underline text-black text-[0.74769rem] font-semibold leading-[1.1215rem]">
                 Save & Publish Later
               </button>
@@ -137,7 +137,8 @@ export const TopNav = () => {
           <img src="/images/saveicon.svg" alt="save icon" />
           Save
         </button>
-        <button className="w-[4.625rem] lg:w-[7.0625rem] py-[0.43725rem] px-[0.54656rem] items-center gap-[0.375rem] rounded-[0.3125rem] bg-[#34333e] border border-white border-solid text-white">
+        <button onClick={() => router.push("/screen3")}
+         className="w-[4.625rem] lg:w-[7.0625rem] py-[0.43725rem] px-[0.54656rem] items-center gap-[0.375rem] rounded-[0.3125rem] bg-[#34333e] border border-white border-solid text-white">
           Submit
         </button>
       </div>
